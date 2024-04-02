@@ -1,20 +1,27 @@
-// State Variables can be declared outside of the onReady
-// Feel free to make this to what you want!
-// Example:
-// let fungusHP = 100;
+let fungusHp = 100;
+let myAp = 100;
+let fungusDamage = 0;
+let myDamage = 0;
 
 function onReady() {
-    console.log("Ready to go!")
-    
-    // Make sure you check the index.html file! 
-    // There are lots of buttons and things ready for you to hook into here!
-    
-    
-    // 🧠 Remember
-    // - Handle events that ->
-    // - Updates state which is ->
-    // - Rendered to the DOM
+  let apMeter = document.getElementById('ap-meter').value;
+  console.log(apMeter);
+
+  let hpMeter = document.getElementById('hp-meter').value;
+  console.log(hpMeter);
 }
 
+onReady();
 
-onReady()
+function attackArcane() {
+  console.log('attackArcane');
+}
+function attackEntangle() {
+  console.log('attackEntangle');
+}
+function attackDragon() {
+  console.log('attackDragon');
+}
+function attackStar() {
+  console.log('attackStar');
+}
