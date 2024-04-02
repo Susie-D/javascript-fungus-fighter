@@ -1,42 +1,61 @@
 let fungusHp = 100;
 let myAp = 100;
 
-let fungusDamage = 0;
-let myDamage = 0;
 
-function onReady() {
-  let apMeter = document.getElementById('ap-meter').value;
-  let apText = document.getElementsByClassName('ap-text');
-  apText.innerText = ` 80 AP`;
-  // TODO: Loop through Collection to get values
-  console.log(apText);
+let apText = document.getElementsByClassName('ap-text');
+let hpText = document.getElementsByClassName('hp-text');
 
-  apMeter = 80;
+let apMeter = document.getElementById('ap-meter');
+let hpMeter = document.getElementById('hp-meter');
 
-  console.log(apMeter);
 
-  //   let hpMeter = document.getElementById('hp-meter').value;
-  //   console.log(hpMeter);
-}
-onReady();
 
 function attackArcane() {
   console.log('attackArcane');
 
-  myAp = myAp - 14;
+  myAp = myAp - 12;
   fungusHp = fungusHp - 14;
 
-  console.log(fungusHp);
-  console.log(myAp);
+  for (let i = 0; i < apText.length; i++) {
+    if (myAp < 0 || fungusHp < 0) {
+      myAp = 0;
+      fungusHp = 0;
+    }
+    apText[i].innerHTML = `${myAp} AP`;
+    apMeter.value = myAp;
+  }
+
+  for (let i = 0; i < hpText.length; i++) {
+    if (myAp < 0 || fungusHp < 0) {
+      myAp = 0;
+      fungusHp = 0;
+    }
+    hpText[i].innerHTML = `${myAp} HP`;
+    hpMeter.value = myAp;
+  }
 }
 function attackEntangle() {
   console.log('attackEntangle');
 
   myAp = myAp - 23;
   fungusHp = fungusHp - 9;
+  for (let i = 0; i < apText.length; i++) {
+    if (myAp < 0 || fungusHp < 0) {
+      myAp = 0;
+      fungusHp = 0;
+    }
+    apText[i].innerHTML = `${myAp} AP`;
+    apMeter.value = myAp;
+  }
 
-  console.log(fungusHp);
-  console.log(myAp);
+  for (let i = 0; i < hpText.length; i++) {
+    if (myAp < 0 || fungusHp < 0) {
+      myAp = 0;
+      fungusHp = 0;
+    }
+    hpText[i].innerHTML = `${myAp} HP`;
+    hpMeter.value = myAp;
+  }
 }
 function attackDragon() {
   console.log('attackDragon');
@@ -44,21 +63,46 @@ function attackDragon() {
   myAp = myAp - 38;
   fungusHp = fungusHp - 47;
 
-  console.log(fungusHp);
-  console.log(myAp);
+  for (let i = 0; i < apText.length; i++) {
+    if (myAp < 0 || fungusHp < 0) {
+      myAp = 0;
+      fungusHp = 0;
+    }
+    apText[i].innerHTML = `${myAp} AP`;
+    apMeter.value = myAp;
+  }
+
+  for (let i = 0; i < hpText.length; i++) {
+    if (myAp < 0 || fungusHp < 0) {
+      myAp = 0;
+      fungusHp = 0;
+    }
+    hpText[i].innerHTML = `${myAp} HP`;
+    hpMeter.value = myAp;
+  }
 }
 function attackStar() {
   console.log('attackStar');
 
-  myAp = myAp - 33;
-  fungusHp = fungusHp - 25;
+  for (let i = 0; i < apText.length; i++) {
+    if (myAp < 0 || fungusHp < 0) {
+      myAp = 0;
+      fungusHp = 0;
+    }
+    apText[i].innerHTML = `${myAp} AP`;
+    apMeter.value = myAp;
+  }
 
-  console.log(fungusHp);
-  console.log(myAp);
+  for (let i = 0; i < hpText.length; i++) {
+    if (myAp < 0 || fungusHp < 0) {
+      myAp = 0;
+      fungusHp = 0;
+    }
+    hpText[i].innerHTML = `${myAp} HP`;
+    hpMeter.value = myAp;
+  }
 }
 
 // TODO:
-// Update Rendered AP/HP Text
-// Update ProgresBarValue
 // Update Classes for the Fungus
 // Disabled attack at 0
