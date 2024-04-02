@@ -6,10 +6,17 @@ let myDamage = 0;
 
 function onReady() {
   let apMeter = document.getElementById('ap-meter').value;
+  let apText = document.getElementsByClassName('ap-text');
+  apText.innerText = ` 80 AP`;
+  // TODO: Loop through Collection to get values
+  console.log(apText);
+
+  apMeter = 80;
+
   console.log(apMeter);
 
-  let hpMeter = document.getElementById('hp-meter').value;
-  console.log(hpMeter);
+  //   let hpMeter = document.getElementById('hp-meter').value;
+  //   console.log(hpMeter);
 }
 onReady();
 
@@ -49,3 +56,9 @@ function attackStar() {
   console.log(fungusHp);
   console.log(myAp);
 }
+
+// TODO:
+// Update Rendered AP/HP Text
+// Update ProgresBarValue
+// Update Classes for the Fungus
+// Disabled attack at 0
