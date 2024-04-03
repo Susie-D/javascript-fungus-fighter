@@ -1,14 +1,17 @@
 let fungusHp = 100;
 let myAp = 100;
 
-
 let apText = document.getElementsByClassName('ap-text');
 let hpText = document.getElementsByClassName('hp-text');
 
 let apMeter = document.getElementById('ap-meter');
 let hpMeter = document.getElementById('hp-meter');
 
+// Fungus dead - myAp won
 
+// Fungus walk -
+
+console.log(myAp);
 
 function attackArcane() {
   console.log('attackArcane');
@@ -20,6 +23,7 @@ function attackArcane() {
     if (myAp < 0 || fungusHp < 0) {
       myAp = 0;
       fungusHp = 0;
+      document.getElementsByClassName('button').disabled = true;
     }
     apText[i].innerHTML = `${myAp} AP`;
     apMeter.value = myAp;
@@ -29,6 +33,7 @@ function attackArcane() {
     if (myAp < 0 || fungusHp < 0) {
       myAp = 0;
       fungusHp = 0;
+      document.getElementsByClassName('button').disabled = true;
     }
     hpText[i].innerHTML = `${myAp} HP`;
     hpMeter.value = myAp;
@@ -43,6 +48,7 @@ function attackEntangle() {
     if (myAp < 0 || fungusHp < 0) {
       myAp = 0;
       fungusHp = 0;
+      document.getElementsByClassName('button').disabled = true;
     }
     apText[i].innerHTML = `${myAp} AP`;
     apMeter.value = myAp;
@@ -52,6 +58,7 @@ function attackEntangle() {
     if (myAp < 0 || fungusHp < 0) {
       myAp = 0;
       fungusHp = 0;
+      document.getElementsByClassName('button').disabled = true;
     }
     hpText[i].innerHTML = `${myAp} HP`;
     hpMeter.value = myAp;
@@ -67,6 +74,7 @@ function attackDragon() {
     if (myAp < 0 || fungusHp < 0) {
       myAp = 0;
       fungusHp = 0;
+      document.getElementsByClassName('button').disabled = true;
     }
     apText[i].innerHTML = `${myAp} AP`;
     apMeter.value = myAp;
@@ -76,6 +84,7 @@ function attackDragon() {
     if (myAp < 0 || fungusHp < 0) {
       myAp = 0;
       fungusHp = 0;
+      document.getElementsByClassName('button').disabled = true;
     }
     hpText[i].innerHTML = `${myAp} HP`;
     hpMeter.value = myAp;
@@ -88,6 +97,7 @@ function attackStar() {
     if (myAp < 0 || fungusHp < 0) {
       myAp = 0;
       fungusHp = 0;
+      document.getElementsByClassName('button').disabled = true;
     }
     apText[i].innerHTML = `${myAp} AP`;
     apMeter.value = myAp;
@@ -97,6 +107,7 @@ function attackStar() {
     if (myAp < 0 || fungusHp < 0) {
       myAp = 0;
       fungusHp = 0;
+      document.getElementsByClassName('button').disabled = true;
     }
     hpText[i].innerHTML = `${myAp} HP`;
     hpMeter.value = myAp;
